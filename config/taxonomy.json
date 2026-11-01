@@ -1,0 +1,22 @@
+{
+  "version": "2026-10-28",
+  "note": "基于大模型从 300 条评论归纳的草稿（taxonomy_draft.json），经人工确认后合并重叠项、划清边界",
+  "tags": [
+    {"group": "菜品", "name": "口味", "definition": "菜品的味道、口感是否好吃", "examples": ["味道很正宗", "太咸了"]},
+    {"group": "菜品", "name": "食材新鲜", "definition": "食材的新鲜程度和品质", "examples": ["食材很新鲜", "肉不新鲜"]},
+    {"group": "菜品", "name": "分量", "definition": "菜品分量是否足够", "examples": ["量很大", "量太少了"]},
+    {"group": "菜品", "name": "菜品特色", "definition": "招牌菜、创意或独特之处", "examples": ["招牌菜很有特色", "菜品没特色"]},
+    {"group": "菜品", "name": "菜品选择", "definition": "菜品种类是否丰富", "examples": ["菜品种类多", "选择少"]},
+    {"group": "服务", "name": "服务态度", "definition": "服务员的态度和热情程度（只管态度，不含速度）", "examples": ["服务很热情", "服务员爱理不理"]},
+    {"group": "服务", "name": "上菜速度", "definition": "从点菜到菜品上桌的快慢", "examples": ["上菜很快", "等了一个小时还没上"]},
+    {"group": "服务", "name": "服务效率", "definition": "点餐、加水、换盘、结账等服务环节的速度和效率（不含上菜）", "examples": ["结账很快", "叫了几次都没人来加水"]},
+    {"group": "环境", "name": "环境氛围", "definition": "装修、氛围、噪音、座位舒适度（不含卫生）", "examples": ["环境很有情调", "太吵了"]},
+    {"group": "环境", "name": "卫生状况", "definition": "餐具、桌面、食品的清洁卫生", "examples": ["很干净", "菜里有虫"]},
+    {"group": "价格", "name": "价格", "definition": "价格水平高低（贵不贵）", "examples": ["价格实惠", "太贵了"]},
+    {"group": "价格", "name": "性价比", "definition": "综合体验相对价格是否值得（值不值）", "examples": ["性价比很高", "不值这个价"]},
+    {"group": "价格", "name": "优惠活动", "definition": "团购、折扣、会员等优惠", "examples": ["团购很划算", "团购券不能用"]},
+    {"group": "到店", "name": "排队等位", "definition": "是否需要排队、等位时间长短", "examples": ["排队人很多", "不用等位"]},
+    {"group": "到店", "name": "交通位置", "definition": "位置是否好找、交通是否方便（不含停车）", "examples": ["地铁站出口就到", "很难找"]},
+    {"group": "到店", "name": "停车便利", "definition": "停车是否方便、有无停车场或停车优惠", "examples": ["停车方便", "停车难"]}
+  ]
+}

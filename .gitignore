@@ -1,0 +1,23 @@
+# 密钥
+.env
+
+# 原始数据（单文件 305 MB，超过 GitHub 限制；下载方式见 README）
+data/raw/
+# 本地备份与运行时文件
+data/*_backup_*.db
+data/*.db-wal
+data/*.db-shm
+data/poll.lock
+
+# 未使用的早期数据
+Public_Opinion_Dataset.csv
+yf_dianping/
+
+# Claude Code 本地配置：.claude/skills 是指向 skills/ 的目录联接，克隆后用 scripts/install_claude_skills.ps1 重建
+.claude/skills/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

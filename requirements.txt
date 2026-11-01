@@ -1,0 +1,10 @@
+pandas==2.2.3
+numpy==2.2.6
+openpyxl==3.1.5
+pyarrow==23.0.1
+openai==2.24.0
+python-dotenv==1.1.1
+pyecharts==2.1.0
+networkx==3.4.2
+streamlit==1.56.0
+apscheduler==3.11.3
