@@ -102,6 +102,19 @@ python watcher.py              # 后台轮询：启动时立即检查一次，�
 streamlit run app.py           # 网页：http://localhost:8501
 ```
 
+### 部署到 Streamlit Community Cloud
+1. Create app → 选择本仓库、`main` 分支、主文件 `app.py`
+2. **Advanced settings → Python version 选 3.12**（默认的新版本 Python 没有 numpy/pandas 预编译包，会卡在源码编译）
+3. **Secrets** 填写（TOML 格式，字符串要加引号，不要放进 `[section]`，这样才会作为环境变量被读取）：
+   ```toml
+   DEEPSEEK_API_KEY = "sk-你的密钥"
+   DEEPSEEK_BASE_URL = "https://api.deepseek.com"
+   LLM_MODEL_EXTRACT = "deepseek-flash"
+   LLM_MODEL_CHAT = "deepseek-v4-pro"
+   ```
+4. 云端只运行 `app.py`：看板、日报、Skill 报告和对话都可用；**没有桌面轮询**（云端监控目录为 `data/inbox`），自动轮询请在本地用 `watcher.py` 演示
+5. 公开部署时，任何人都能使用对话功能并消耗你的 DeepSeek 额度，建议在 Sharing 中限制访问或在 DeepSeek 控制台设置用量上限
+
 ### 其他命令
 ```bash
 python cli.py ingest                       # 把 data/daily 下的文件全部入库
@@ -119,7 +132,7 @@ app.py                 Streamlit 网页（看板 + 对话）
 watcher.py             每小时轮询的后台进程
 cli.py                 命令行入口
 core/
-  config.py            路径与环境变量（桌面路径通过系统接口获取，兼容 OneDrive）
+  config.py            路径与环境变量（Windows 下通过系统接口取桌面路径，兼容 OneDrive；其他系统用 data/inbox）
   db.py                SQLite 表结构（WAL 模式，支持多进程同时读写）
   ingest.py            Excel 增量入库
   llm.py               DeepSeek 调用封装（JSON 输出、重试）
