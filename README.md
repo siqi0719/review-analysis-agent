@@ -104,7 +104,7 @@ streamlit run app.py           # 网页：http://localhost:8501
 
 ### 部署到 Streamlit Community Cloud
 1. Create app → 选择本仓库、`main` 分支、主文件 `app.py`
-2. **Advanced settings → Python version 选 3.12**（默认的新版本 Python 没有 numpy/pandas 预编译包，会卡在源码编译）
+2. Python 版本用默认值即可（已在 3.12 下测试；依赖版本均提供 3.12–3.14 的预编译包）
 3. **Secrets** 填写（TOML 格式，字符串要加引号，不要放进 `[section]`，这样才会作为环境变量被读取）：
    ```toml
    DEEPSEEK_API_KEY = "sk-你的密钥"
